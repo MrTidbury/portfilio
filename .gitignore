@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+react-app/node_modules/
+
+# Build outputs
+react-app/build/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# React
+react-app/.pnp
+react-app/.pnp.js
+react-app/coverage/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+*.log
+cv_raw_text.txt
+extract_cv.py
+cv_data.json
