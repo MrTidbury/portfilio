@@ -1,0 +1,22 @@
+# This file specifies files that are *not* uploaded to Google Cloud
+# using gcloud. It follows the same syntax as .gitignore
+
+react-app/src/
+react-app/public/
+react-app/node_modules/
+react-app/package*.json
+react-app/tsconfig.json
+react-app/README.md
+react-app/LICENSE
+node_modules/
+.git/
+.gitignore
+*.pyc
+__pycache__/
+venv/
+env/
+*.log
+cv_raw_text.txt
+extract_cv.py
+cv_data.json
+

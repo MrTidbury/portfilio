@@ -1,0 +1,24 @@
+"""
+Flask application to serve the React portfolio static files.
+"""
+
+from flask import Flask, send_from_directory
+import os
+
+app = Flask(__name__, static_folder='react-app/build', static_url_path='')
+
+
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    """Serve the React app for all routes."""
+    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port, debug=False)
+
